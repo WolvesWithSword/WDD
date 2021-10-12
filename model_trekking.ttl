@@ -1,0 +1,74 @@
+@base <http://trekking.fr/resource/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>. 
+
+#Class
+
+<Destination> a rdfs:Class.
+<Country> a rdfs:Class.
+
+<TripType> a rdfs:Class.
+
+<WalkingTour> a rdfs:Class;
+    rdfs:subClassOf <TripType>.
+<HighMountains> a rdfs:Class;
+    rdfs:subClassOf <TripType>.
+<Snow> a rdfs:Class;
+    rdfs:subClassOf <TripType>.
+<TravelDifferently> a rdfs:Class;
+    rdfs:subClassOf <TripType>.
+<Safari> a rdfs:Class;
+    rdfs:subClassOf <TripType>.
+<Bike> a rdfs:Class;
+    rdfs:subClassOf <TripType>.
+
+<Activity> a rdfs:Class.
+
+<Person> a rdfs:Class;
+    rdfs:subClassOf foaf:Person.
+<Client> a rdfs:Class;
+    rdfs:subClassOf <Person>.
+<Guide> a rdfs:Class;
+    rdfs:subClassOf <Person>.
+
+<TravelGroup> a rdfs:Class.
+    
+#Property
+
+<participantsMaxNumber> a rdf:Property;
+    rdfs:domain <TravelGroup>;
+    rdfs:range xsd:integer.
+
+<hasParticipant> a rdf:Property;
+    rdfs:domain <TravelGroup>;
+    rdfs:range <Client>.
+
+<hasGuide> a rdf:Property;
+    rdfs:domain <TravelGroup>;
+    rdfs:range <Guide>.
+
+<isInCountry> a rdf:Property;
+    rdfs:domain <Destination>;
+    rdfs:range <Activity>.
+
+<hasActivity> a rdf:Property;
+    rdfs:domain <TripType>;
+    rdfs:range <Activity>.
+
+<date> a rdf:Property;
+    rdfs:range xsd:date.
+
+<evaluation> a rdf:Property;
+    rdfs:range xsd:integer.
+
+<name> a rdf:Property;
+    rdfs:range xsd:string.
+
+<lastName> a rdf:Property;
+    rdfs:range xsd:string.
+
+<description> a rdf:Property;
+    rdfs:range xsd:string.
+
