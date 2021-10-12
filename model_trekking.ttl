@@ -99,7 +99,11 @@
 
 <isInCountry> a rdf:Property;
     rdfs:domain <Destination>;
-    rdfs:range <Activity>.
+    rdfs:range <Country>.
+
+<hasDestination> a  rdf:Property;
+    rdfs:domain <Activity>;
+    rdfs:range <Destination>.
 
 <hasActivity> a rdf:Property;
     rdfs:domain <TripType>;
