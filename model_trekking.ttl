@@ -6,36 +6,84 @@
 
 #Class
 
-<Destination> a rdfs:Class.
-<Country> a rdfs:Class.
+<Destination> a rdfs:Class;
+    rdfs:label "destination";
+    rdfs:comment "a destination".
+<Country> a rdfs:Class;
+    rdfs:label "country";
+    rdfs:comment "a country".
 
-<TripType> a rdfs:Class.
+<TripType> a rdfs:Class;
+    rdfs:label "trip type";
+    rdfs:comment "a trip type".
 
 <WalkingTour> a rdfs:Class;
-    rdfs:subClassOf <TripType>.
+    rdfs:subClassOf <TripType>;
+    rdfs:label "walking tour";
+    rdfs:comment "a walking tour trip".
 <HighMountains> a rdfs:Class;
-    rdfs:subClassOf <TripType>.
+    rdfs:subClassOf <TripType>;
+    rdfs:label "high mountains";
+    rdfs:comment "a hight mountains trip".
 <Snow> a rdfs:Class;
-    rdfs:subClassOf <TripType>.
+    rdfs:subClassOf <TripType>;
+    rdfs:label "Snow";
+    rdfs:comment "a trip in the snow".
 <TravelDifferently> a rdfs:Class;
-    rdfs:subClassOf <TripType>.
+    rdfs:subClassOf <TripType>;
+    rdfs:label "travel differently";
+    rdfs:comment "a trip with various modes of transport".
 <Safari> a rdfs:Class;
-    rdfs:subClassOf <TripType>.
+    rdfs:subClassOf <TripType>;
+    rdfs:label "safari";
+    rdfs:comment "a safari trip".
 <Bike> a rdfs:Class;
-    rdfs:subClassOf <TripType>.
+    rdfs:subClassOf <TripType>;
+    rdfs:label "bike";
+    rdfs:comment "a bike trip".
 
-<Activity> a rdfs:Class.
+<Activity> a rdfs:Class;
+    rdfs:label "activity";
+    rdfs:comment "an activity".
 
 <Person> a rdfs:Class;
-    rdfs:subClassOf foaf:Person.
-<Client> a rdfs:Class;
-    rdfs:subClassOf <Person>.
-<Guide> a rdfs:Class;
-    rdfs:subClassOf <Person>.
+    rdfs:subClassOf foaf:Person;
+    rdfs:label "person";
+    rdfs:comment "a person".
+<Female> a rdfs:Class;
+    rdfs:label "female";
+    rdfs:comment "a female".
+<Male> a rdfs:Class;
+    rdfs:label "male";
+    rdfs:comment "a male".
 
-<TravelGroup> a rdfs:Class.
+<Man> a rdfs:Class;
+    rdfs:subClassOf <Person>, <Male>;
+    rdfs:label "man";
+    rdfs:comment "a male person".
+<Woman> a rdfs:Class;
+    rdfs:subClassOf <Person>, <Female>;
+    rdfs:label "woman";
+    rdfs:comment "a female person".
+
+<Client> a rdfs:Class;
+    rdfs:subClassOf <Person>;
+    rdfs:label "client";
+    rdfs:comment "a client of the trekking agency".
+<Guide> a rdfs:Class;
+    rdfs:subClassOf <Person>;
+    rdfs:label "client";
+    rdfs:comment "a guide of a travel".
+
+<TravelGroup> a rdfs:Class;
+    rdfs:label "travel group";
+    rdfs:comment "a travel group".
     
 #Property
+
+<hasTravelGroup> a rdf:Property;
+    rdfs:domain <TravelGroup>;
+    rdfs:range <Activity>.
 
 <participantsMaxNumber> a rdf:Property;
     rdfs:domain <TravelGroup>;
