@@ -1,14 +1,12 @@
 @base <http://trekking.fr/resource/>.
+@prefix onto: <http://trekking.fr/ontology/>.
+
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>. 
 
 #Class
-
-<Destination> a rdfs:Class;
-    rdfs:label "destination";
-    rdfs:comment "a destination".
 <Country> a rdfs:Class;
     rdfs:label "country";
     rdfs:comment "a country".
@@ -81,46 +79,42 @@
     
 #Property
 
-<hasTravelGroup> a rdf:Property;
+<onto:hasTravelGroup> a rdf:Property;
     rdfs:domain <TravelGroup>;
     rdfs:range <Activity>.
 
-<participantsMaxNumber> a rdf:Property;
+<onto:participantsMaxNumber> a rdf:Property;
     rdfs:domain <TravelGroup>;
     rdfs:range xsd:integer.
 
-<hasParticipant> a rdf:Property;
+<onto:hasParticipant> a rdf:Property;
     rdfs:domain <TravelGroup>;
     rdfs:range <Client>.
 
-<hasGuide> a rdf:Property;
+<onto:hasGuide> a rdf:Property;
     rdfs:domain <TravelGroup>;
     rdfs:range <Guide>.
 
-<isInCountry> a rdf:Property;
-    rdfs:domain <Destination>;
+<onto:hasDestination> a  rdf:Property;
+    rdfs:domain <Activity>;
     rdfs:range <Country>.
 
-<hasDestination> a  rdf:Property;
-    rdfs:domain <Activity>;
-    rdfs:range <Destination>.
-
-<hasActivity> a rdf:Property;
+<onto:hasActivity> a rdf:Property;
     rdfs:domain <TripType>;
     rdfs:range <Activity>.
 
-<date> a rdf:Property;
+<onto:departureDate> a rdf:Property;
     rdfs:range xsd:date.
 
-<evaluation> a rdf:Property;
-    rdfs:range xsd:integer.
+<onto:evaluation> a rdf:Property;
+    rdfs:range xsd:double.
 
-<name> a rdf:Property;
+<onto:price> a rdf:Property;
+    rdfs:range xsd:double.
+
+<onto:name> a rdf:Property;
     rdfs:range xsd:string.
 
-<lastName> a rdf:Property;
-    rdfs:range xsd:string.
-
-<description> a rdf:Property;
+<onto:description> a rdf:Property;
     rdfs:range xsd:string.
 

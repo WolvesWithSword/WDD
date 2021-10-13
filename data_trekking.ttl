@@ -1,0 +1,104 @@
+@base <http://trekking.fr/resource/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>. 
+@prefix onto: <http://trekking.fr/ontology/>.
+
+<hiking>
+a <WalkingTour>;
+onto:name "Hiking";
+ont:hasActivity <AdrarOases>;
+ont:hasActivity <TikalVolcanoes>.
+
+<AdrarOases>
+a <Activity>;
+onto:name "The oases of the Adrar";
+onto:description "This magnificent trek offers a real dive in the heart of the Mauritanian desert.";
+onto:evaluation "4.8"^^xsd:double;
+onto:price: "1165.0"^^xsd:double;
+onto:hasDestination <Mauritania>;
+onto:hasTravelGroup <AdrarGroup>.
+
+<TikalVolcanoes>
+a <Activity>;
+onto:name "From Mayan volcanoes to the temples of Tikal";
+onto:evaluation "5.0"^^xsd:double;
+onto:price: "3290.0"^^xsd:double;
+onto:description "Hike in Guatemala on the volcanic highlands and climb its main volcanoes, including Tajumulco (4200 m).";
+onto:hasDestination <Guatemala>;
+onto:hasTravelGroup <TikalGroup>.
+
+<Mauritania>
+a <Country>;
+onto:name "Mauritania";
+onto:description "Mauritania is a state in Northwest Africa".
+
+<Guatemala>
+a <Country>;
+onto:name "Guatemala";
+onto:description "Guatemala is a country in Central America".
+
+<AdrarGroup>
+a <TravelGroup>;
+onto:participantsMaxNumber "5"^^xsd:integer;
+onto:departureDate "2021-10-13"^^xsd:date;
+onto:hasGuide <Michel>;
+onto:hasParticipant <Vanessa>;
+onto:hasParticipant <Laurent>;
+onto:hasParticipant <David>.
+
+<TikalGroup>
+a <TravelGroup>;
+onto:participantsMaxNumber "3"^^xsd:integer;
+onto:departureDate "2021-10-13"^^xsd:date;
+onto:hasGuide <Cesar>;
+onto:hasParticipant <Marc>;
+onto:hasParticipant <Charlie>;
+onto:hasParticipant <Natacha>.
+
+
+<Michel>
+a <Guide>, <Man>;
+foaf:name "Michel";
+foaf:age "41"^^xsd:integer;
+foaf:familyName "Labranche".
+
+<Vanessa>
+a <Client>, <Woman>;
+foaf:name "Vanessa";
+foaf:age "30"^^xsd:integer;
+foaf:familyName "Petit".
+
+<Laurent>
+a <Client>, <Man>;
+foaf:name "Laurent";
+foaf:age "32"^^xsd:integer;
+foaf:familyName "Petit".
+
+<David>
+a <Client>, <Man>;
+foaf:name "David";
+foaf:age "50"^^xsd:integer;
+foaf:familyName "Escargot".
+
+<Cesar>
+a <Guide>, <Man>;
+foaf:name "Cesar";
+foaf:age "47"^^xsd:integer;
+foaf:familyName "Laurier".
+
+<Marc>
+a <Client>, <Man>;
+foaf:name "Marc";
+foaf:age "46"^^xsd:integer;
+foaf:familyName "Down".
+
+<Charlie>
+a <Client>, <Man>;
+foaf:name "Charlie";
+foaf:age "34"^^xsd:integer;
+foaf:familyName "Chocolat".
+
+<Natacha>
+a <Client>, <Woman>;
+foaf:name "Natacha";
+foaf:age "28"^^xsd:integer;
+foaf:familyName "Swift".
