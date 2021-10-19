@@ -15,11 +15,12 @@ a <WalkingTour>;
 onto:name "Trekking";
 ont:hasActivity <SaharanKaleidoscope>.
 
-
 <snowshoe>
 a <Snow>;
 onto:name "snowshoe";
+ont:hasActivity <SnowshoeingCerdanya>;
 ont:hasActivity <3000Queyras>.
+
 # Activity --------------------
 
 <AdrarOases>
@@ -57,6 +58,15 @@ onto:price: "525.0"^^xsd:double;
 onto:description "Alpine crossing of the Queyras massif by its most beautiful peaks: Pic Caramantran (3025 m), Sagnes Longues (3032 m) and Pic du Château Renard (2989 m).";
 onto:hasDestination <France>;
 onto:hasTravelGroup <QueyrasGroup>.
+
+<SnowshoeingCerdanya>
+a <Activity>;
+onto:name "Snowshoeing and well-being in Cerdanya";
+onto:evaluation "5.0"^^xsd:double;
+onto:price: "780.0"^^xsd:double;
+onto:description "The Cerdanya and its Catalan altiplano, rich in an unsuspected historical and cultural heritage, present a soft relief particularly adapted to snowshoeing.";
+onto:hasDestination <France>;
+onto:hasTravelGroup <CerdanyaGroup>.
 
 # Country --------------------
 <Mauritania>
@@ -112,6 +122,15 @@ onto:hasParticipant <Sacha>;
 onto:hasParticipant <Ondine>;
 onto:hasParticipant <Pierre>.
 
+<CerdanyaGroup>
+a <TravelGroup>;
+onto:participantsMaxNumber "3"^^xsd:integer;
+onto:departureDate "2021-11-11"^^xsd:date;
+onto:hasGuide <Gérard>;
+onto:hasParticipant <David>;
+onto:hasParticipant <Charlie>;
+onto:hasParticipant <Frank>.
+
 # Person ---------------
 
 <Gérard>
@@ -155,6 +174,12 @@ a <Client>, <Man>;
 foaf:name "Robert";
 foaf:age "55"^^xsd:integer;
 foaf:familyName "Camembert".
+
+<Frank>
+a <Client>, <Man>;
+foaf:name "Frank";
+foaf:age "38"^^xsd:integer;
+foaf:familyName "Ribery".
 
 <Michael>
 a <Client>, <Man>;
