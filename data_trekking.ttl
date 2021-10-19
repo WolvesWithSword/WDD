@@ -15,6 +15,11 @@ a <WalkingTour>;
 onto:name "Trekking";
 ont:hasActivity <SaharanKaleidoscope>.
 
+
+<snowshoe>
+a <Snow>;
+onto:name "snowshoe";
+ont:hasActivity <3000Queyras>.
 # Activity --------------------
 
 <AdrarOases>
@@ -37,12 +42,21 @@ onto:hasTravelGroup <TikalGroup>.
 
 <SaharanKaleidoscope>
 a <Activity>;
-onto:name "From Mayan volcanoes to the temples of Tikal";
+onto:name "The Saharan Kaleidoscope";
 onto:evaluation "5.0"^^xsd:double;
 onto:price: "1545.0"^^xsd:double;
 onto:description "The first week on the itinerary of the oases and villages of the Adrar and the second, in the heart of a wild universe, between white dunes and typical tabular plateaus of the Amatlich.";
 onto:hasDestination <Mauritania>;
 onto:hasTravelGroup <SaharanGroup>.
+
+<3000Queyras>
+a <Activity>;
+onto:name "The 3000 of Queyras";
+onto:evaluation "5.0"^^xsd:double;
+onto:price: "525.0"^^xsd:double;
+onto:description "Alpine crossing of the Queyras massif by its most beautiful peaks: Pic Caramantran (3025 m), Sagnes Longues (3032 m) and Pic du Château Renard (2989 m).";
+onto:hasDestination <France>;
+onto:hasTravelGroup <QueyrasGroup>.
 
 # Country --------------------
 <Mauritania>
@@ -54,6 +68,11 @@ onto:description "Mauritania is a state in Northwest Africa".
 a <Country>;
 onto:name "Guatemala";
 onto:description "Guatemala is a country in Central America".
+
+<France>
+a <Country>;
+onto:name "France";
+onto:description "France is a country in Central Europa".
 
 # Travel group --------------------
 
@@ -69,7 +88,7 @@ onto:hasParticipant <David>.
 <TikalGroup>
 a <TravelGroup>;
 onto:participantsMaxNumber "3"^^xsd:integer;
-onto:departureDate "2021-10-13"^^xsd:date;
+onto:departureDate "2021-10-15"^^xsd:date;
 onto:hasGuide <Cesar>;
 onto:hasParticipant <Marc>;
 onto:hasParticipant <Charlie>;
@@ -78,13 +97,28 @@ onto:hasParticipant <Natacha>.
 <SaharanGroup>
 a <TravelGroup>;
 onto:participantsMaxNumber "7"^^xsd:integer;
-onto:departureDate "2021-10-13"^^xsd:date;
+onto:departureDate "2021-10-17"^^xsd:date;
 onto:hasGuide <Manitas>;
 onto:hasParticipant <Maya>;
 onto:hasParticipant <Michael>;
 onto:hasParticipant <Robert>.
 
+<QueyrasGroup>
+a <TravelGroup>;
+onto:participantsMaxNumber "4"^^xsd:integer;
+onto:departureDate "2021-10-19"^^xsd:date;
+onto:hasGuide <Gérard>;
+onto:hasParticipant <Sacha>;
+onto:hasParticipant <Ondine>;
+onto:hasParticipant <Pierre>.
+
 # Person ---------------
+
+<Gérard>
+a <Guide>, <Man>;
+foaf:name "Gérard";
+foaf:age "37"^^xsd:integer;
+foaf:familyName "LeMontagnard".
 
 <Manitas>
 a <Guide>, <Man>;
