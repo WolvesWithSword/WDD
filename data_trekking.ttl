@@ -2,11 +2,20 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/>. 
 @prefix onto: <http://trekking.fr/ontology/>.
 
+#Trip type --------------------
+
 <hiking>
 a <WalkingTour>;
 onto:name "Hiking";
 ont:hasActivity <AdrarOases>;
 ont:hasActivity <TikalVolcanoes>.
+
+<trekking>
+a <WalkingTour>;
+onto:name "Trekking";
+ont:hasActivity <SaharanKaleidoscope>.
+
+# Activity --------------------
 
 <AdrarOases>
 a <Activity>;
@@ -26,6 +35,16 @@ onto:description "Hike in Guatemala on the volcanic highlands and climb its main
 onto:hasDestination <Guatemala>;
 onto:hasTravelGroup <TikalGroup>.
 
+<SaharanKaleidoscope>
+a <Activity>;
+onto:name "From Mayan volcanoes to the temples of Tikal";
+onto:evaluation "5.0"^^xsd:double;
+onto:price: "1545.0"^^xsd:double;
+onto:description "The first week on the itinerary of the oases and villages of the Adrar and the second, in the heart of a wild universe, between white dunes and typical tabular plateaus of the Amatlich.";
+onto:hasDestination <Mauritania>;
+onto:hasTravelGroup <SaharanGroup>.
+
+# Country --------------------
 <Mauritania>
 a <Country>;
 onto:name "Mauritania";
@@ -35,6 +54,8 @@ onto:description "Mauritania is a state in Northwest Africa".
 a <Country>;
 onto:name "Guatemala";
 onto:description "Guatemala is a country in Central America".
+
+# Travel group --------------------
 
 <AdrarGroup>
 a <TravelGroup>;
@@ -54,6 +75,22 @@ onto:hasParticipant <Marc>;
 onto:hasParticipant <Charlie>;
 onto:hasParticipant <Natacha>.
 
+<SaharanGroup>
+a <TravelGroup>;
+onto:participantsMaxNumber "7"^^xsd:integer;
+onto:departureDate "2021-10-13"^^xsd:date;
+onto:hasGuide <Manitas>;
+onto:hasParticipant <Maya>;
+onto:hasParticipant <Michael>;
+onto:hasParticipant <Robert>.
+
+# Person ---------------
+
+<Manitas>
+a <Guide>, <Man>;
+foaf:name "Manitas";
+foaf:age "33"^^xsd:integer;
+foaf:familyName "Del habitas".
 
 <Michel>
 a <Guide>, <Man>;
@@ -61,11 +98,35 @@ foaf:name "Michel";
 foaf:age "41"^^xsd:integer;
 foaf:familyName "Labranche".
 
+<Cesar>
+a <Guide>, <Man>;
+foaf:name "Cesar";
+foaf:age "47"^^xsd:integer;
+foaf:familyName "Laurier".
+
 <Vanessa>
 a <Client>, <Woman>;
 foaf:name "Vanessa";
 foaf:age "30"^^xsd:integer;
 foaf:familyName "Petit".
+
+<Maya>
+a <Client>, <Woman>;
+foaf:name "Maya";
+foaf:age "24"^^xsd:integer;
+foaf:familyName "Calendar".
+
+<Robert>
+a <Client>, <Man>;
+foaf:name "Robert";
+foaf:age "55"^^xsd:integer;
+foaf:familyName "Camembert".
+
+<Michael>
+a <Client>, <Man>;
+foaf:name "Michael";
+foaf:age "45"^^xsd:integer;
+foaf:familyName "Jordan".
 
 <Laurent>
 a <Client>, <Man>;
@@ -78,12 +139,6 @@ a <Client>, <Man>;
 foaf:name "David";
 foaf:age "50"^^xsd:integer;
 foaf:familyName "Escargot".
-
-<Cesar>
-a <Guide>, <Man>;
-foaf:name "Cesar";
-foaf:age "47"^^xsd:integer;
-foaf:familyName "Laurier".
 
 <Marc>
 a <Client>, <Man>;
