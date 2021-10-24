@@ -6,9 +6,9 @@ Web de données
 - Ajouter une personne/guide
 - Ajouter une nouvelle activiter avec un guide
 - Voir les activiter ou il reste de la place
-- Voir les 10 activité les moins cher
-- Voir les 10 activité les moins cher accompagner d'un guide
-- Voir les 10 activité les moins cher en France
+- Voir les 3 activité les moins cher
+- Voir les 3 activité les moins cher accompagner d'un guide
+- Voir les 3 activité les moins cher en France
 - Voir le nombre d'activité d'un guide
 - Pour une personne, voir les guide avec la quelle il a deja fait une activité
 - Pour une personne, voir la liste des activité effectuer
