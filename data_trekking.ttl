@@ -112,26 +112,26 @@ a <TravelGroup>;
 onto:participantsMaxNumber "5"^^xsd:integer;
 onto:departureDate "2021-10-13"^^xsd:date;
 onto:hasGuide <Michel>;
-onto:hasParticipant <Vanessa>;
-onto:hasParticipant <Laurent>;
-onto:hasParticipant <David>.
+onto:hasClient <Vanessa>;
+onto:hasClient <Laurent>;
+onto:hasClient <David>.
 
 <AdrarGroup2>
 a <TravelGroup>;
 onto:participantsMaxNumber "5"^^xsd:integer;
 onto:departureDate "2022-12-10"^^xsd:date;
 onto:hasGuide <Jean>;
-onto:hasParticipant <Paul>;
-onto:hasParticipant <Jack>.
+onto:hasClient <Paul>;
+onto:hasClient <Jack>.
 
 <AdrarGroup3>
 a <TravelGroup>;
 onto:participantsMaxNumber "5"^^xsd:integer;
 onto:departureDate "2020-11-13"^^xsd:date;
 onto:hasGuide <Michel>;
-onto:hasParticipant <Robert>;
-onto:hasParticipant <Claude>;
-onto:hasParticipant <Linda>,<Manitas>.
+onto:hasClient <Robert>;
+onto:hasClient <Claude>;
+onto:hasClient <Linda>,<Manitas>.
 
 
 <TikalGroup>
@@ -139,45 +139,45 @@ a <TravelGroup>;
 onto:participantsMaxNumber "3"^^xsd:integer;
 onto:departureDate "2021-10-15"^^xsd:date;
 onto:hasGuide <Cesar>;
-onto:hasParticipant <Marc>;
-onto:hasParticipant <Charlie>;
-onto:hasParticipant <Natacha>.
+onto:hasClient <Marc>;
+onto:hasClient <Charlie>;
+onto:hasClient <Natacha>.
 
 <SaharanGroup>
 a <TravelGroup>;
 onto:participantsMaxNumber "7"^^xsd:integer;
 onto:departureDate "2021-10-17"^^xsd:date;
 onto:hasGuide <Manitas>;
-onto:hasParticipant <Maya>;
-onto:hasParticipant <Michael>;
-onto:hasParticipant <Robert>.
+onto:hasClient <Maya>;
+onto:hasClient <Michael>;
+onto:hasClient <Robert>.
 
 <QueyrasGroup>
 a <TravelGroup>;
 onto:participantsMaxNumber "4"^^xsd:integer;
 onto:departureDate "2021-10-19"^^xsd:date;
 onto:hasGuide <Gérard>;
-onto:hasParticipant <Sacha>;
-onto:hasParticipant <Ondine>;
-onto:hasParticipant <Pierre>.
+onto:hasClient <Sacha>;
+onto:hasClient <Ondine>;
+onto:hasClient <Pierre>.
 
 <CerdanyaGroup>
 a <TravelGroup>;
 onto:participantsMaxNumber "3"^^xsd:integer;
 onto:departureDate "2021-11-11"^^xsd:date;
 onto:hasGuide <Gérard>;
-onto:hasParticipant <David>;
-onto:hasParticipant <Charlie>;
-onto:hasParticipant <Frank>.
+onto:hasClient <David>;
+onto:hasClient <Charlie>;
+onto:hasClient <Frank>.
 
 <CerdanyaGroup2>
 a <TravelGroup>;
 onto:participantsMaxNumber "3"^^xsd:integer;
 onto:departureDate "2021-11-11"^^xsd:date;
 onto:hasGuide <Gérard>;
-onto:hasParticipant <Ondine>;
-onto:hasParticipant <Pierre>;
-onto:hasParticipant <Franky>.
+onto:hasClient <Ondine>;
+onto:hasClient <Pierre>;
+onto:hasClient <Franky>.
 
 
 # Person ---------------

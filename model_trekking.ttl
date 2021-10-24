@@ -92,6 +92,12 @@
     rdfs:range <Client>.
 
 <onto:hasGuide> a rdf:Property;
+    rdfs:subClassOf foaf:hasParticipant;
+    rdfs:domain <TravelGroup>;
+    rdfs:range <Guide>.
+
+<onto:hasClient> a rdf:Property;
+    rdfs:subClassOf foaf:hasParticipant;
     rdfs:domain <TravelGroup>;
     rdfs:range <Guide>.
 
