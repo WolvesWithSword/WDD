@@ -1,27 +1,27 @@
-# le nombre de participant par groupe
-prefix foaf: <http://xmlns.com/foaf/0.1/>. 
-prefix onto: <http://trekking.fr/ontology/>.
-prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-prefix resource: <http://trekking.fr/resource/>.
+# 1 - le nombre de participants par groupes
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+prefix onto: <http://trekking.fr/ontology/>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix resource: <http://trekking.fr/resource/>
 
 SELECT  ?group (COUNT(?participant) AS ?nb_participant)
 WHERE {
- 	?x ?y ?group
+ 	?x ?y ?group.
 	?group onto:hasParticipant ?participant
 }
 GROUP BY ?group
 
-# le nombre de place restant par group
-prefix foaf: <http://xmlns.com/foaf/0.1/>. 
-prefix onto: <http://trekking.fr/ontology/>.
-prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-prefix resource: <http://trekking.fr/resource/>.
+# 2 - le nombre de places restant par groupes
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+prefix onto: <http://trekking.fr/ontology/>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix resource: <http://trekking.fr/resource/>
 SELECT ?x ?group ?max_participant ?nb_participant ((?max_participant - ?nb_participant) AS ?place_dispo) WHERE
 {
     {
         SELECT  ?group (COUNT(?participant) AS ?nb_participant)
         WHERE {
-            ?x ?y ?group
+            ?x ?y ?group.
             ?group onto:hasParticipant ?participant
         }
         GROUP BY ?group
@@ -33,17 +33,17 @@ SELECT ?x ?group ?max_participant ?nb_participant ((?max_participant - ?nb_parti
 
 }
 
-# le nombre de place restant par group qui n'ont toujours pas commencer
-prefix foaf: <http://xmlns.com/foaf/0.1/>. 
-prefix onto: <http://trekking.fr/ontology/>.
-prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-prefix resource: <http://trekking.fr/resource/>.
+# 3 - le nombre de places restant par groupes qui n'ont toujours pas commencés
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+prefix onto: <http://trekking.fr/ontology/>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix resource: <http://trekking.fr/resource/>
 SELECT ?x ?group ?max_participant ?nb_participant ((?max_participant - ?nb_participant) AS ?place_dispo) ?date WHERE
 {
     {
         SELECT  ?group (COUNT(?participant) AS ?nb_participant)
         WHERE {
-            ?x ?y ?group
+            ?x ?y ?group.
             ?group onto:hasParticipant ?participant
         }
         GROUP BY ?group
@@ -56,11 +56,11 @@ SELECT ?x ?group ?max_participant ?nb_participant ((?max_participant - ?nb_parti
 }
 
 
-# les 3 activite les moins cher du site
-prefix foaf: <http://xmlns.com/foaf/0.1/>. 
-prefix onto: <http://trekking.fr/ontology/>.
-prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-prefix resource: <http://trekking.fr/resource/>.
+# 4 - les 3 activités les moins chères du site
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+prefix onto: <http://trekking.fr/ontology/>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix resource: <http://trekking.fr/resource/>
 
 SELECT * WHERE
 {
@@ -70,11 +70,11 @@ SELECT * WHERE
 ORDER BY ASC(?price) 
 LIMIT 3
 
-# toutes les personne avec les quel un guide a fait une activité (en tant que guide de l'activité)
-prefix foaf: <http://xmlns.com/foaf/0.1/>. 
-prefix onto: <http://trekking.fr/ontology/>.
-prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-prefix resource: <http://trekking.fr/resource/>.
+# 5 - toutes les personnes avec lesquels un guide a fait une activité (en tant que guide de l'activité)
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+prefix onto: <http://trekking.fr/ontology/>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix resource: <http://trekking.fr/resource/>
 
 SELECT DISTINCT ?guide ?participant WHERE
 {
@@ -83,11 +83,11 @@ SELECT DISTINCT ?guide ?participant WHERE
     OPTIONAL { ?guide a resource:Guide}
 } 
 
-# le prix moyen des activiter
-prefix foaf: <http://xmlns.com/foaf/0.1/>. 
-prefix onto: <http://trekking.fr/ontology/>.
-prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-prefix resource: <http://trekking.fr/resource/>.
+# 6 - le prix moyen des activités
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+prefix onto: <http://trekking.fr/ontology/>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix resource: <http://trekking.fr/resource/>
 
 SELECT (AVG(?price) AS ?prix_moyen ) WHERE
 {
@@ -95,11 +95,11 @@ SELECT (AVG(?price) AS ?prix_moyen ) WHERE
     ?activity onto:price ?price.
 }
 
-# le nombre de groupe organiser par guide (ordonné de plus au moins de groupe)
-prefix foaf: <http://xmlns.com/foaf/0.1/>. 
-prefix onto: <http://trekking.fr/ontology/>.
-prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-prefix resource: <http://trekking.fr/resource/>.
+# 7 - le nombre de groupe organisés par guide (ordonné de façon décroissante)
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+prefix onto: <http://trekking.fr/ontology/>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix resource: <http://trekking.fr/resource/>
 
 SELECT ?guide (COUNT(?group) AS ?nb_group ) WHERE
 {
@@ -110,44 +110,44 @@ GROUP BY ?guide
 ORDER BY DESC(?nb_group)
 
 
-# Ajouter Nathalie a la liste des client en tant que femme qui a 19 ans
-prefix foaf: <http://xmlns.com/foaf/0.1/>. 
-prefix onto: <http://trekking.fr/ontology/>.
-prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-prefix resource: <http://trekking.fr/resource/>.
+# 8 - ajouter Nathalie à la liste des clients en tant que femme qui a 19 ans
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+prefix onto: <http://trekking.fr/ontology/>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix resource: <http://trekking.fr/resource/>
 
 INSERT DATA { 
     resource:Nathalie a resource:Client,resource:Woman.
     resource:Nathalie onto:age 19. 
 }
 
-# Supprimer Nathalie a la liste des client ainsi que toutes ces information
-prefix foaf: <http://xmlns.com/foaf/0.1/>. 
-prefix onto: <http://trekking.fr/ontology/>.
-prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-prefix resource: <http://trekking.fr/resource/>.
+# 9 - supprimer Nathalie de la liste des clients ainsi que toutes ces informations
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+prefix onto: <http://trekking.fr/ontology/>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix resource: <http://trekking.fr/resource/>
 DELETE {resource:Nathalie ?x ?y}  
 WHERE { 
     resource:Nathalie ?x ?y 
 }
 
-# le nombre de groupe organiser par guide (ordonné de plus au moins de groupe)
-prefix foaf: <http://xmlns.com/foaf/0.1/>. 
-prefix onto: <http://trekking.fr/ontology/>.
-prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-prefix resource: <http://trekking.fr/resource/>.
+# 10 - les clients qui n'ont jamais participés a une activité
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+prefix onto: <http://trekking.fr/ontology/>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix resource: <http://trekking.fr/resource/>
 
-SELECT ?guide (COUNT(?group) AS ?nb_group ) WHERE
+SELECT ?client WHERE
 {
     ?client a resource:Client.
-    MINUS(?group onto:hasParticipant ?client)
+    MINUS{?group onto:hasParticipant ?client}
 }
 
-# Un graph sur les activiter par secteur geographique
-prefix foaf: <http://xmlns.com/foaf/0.1/>. 
-prefix onto: <http://trekking.fr/ontology/>.
-prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-prefix resource: <http://trekking.fr/resource/>.
+# 11 - Un graphe sur les activités par secteur geographique
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+prefix onto: <http://trekking.fr/ontology/>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix resource: <http://trekking.fr/resource/>
 
 CONSTRUCT {?activity onto:hasDestination ?secteur}  WHERE
 {
