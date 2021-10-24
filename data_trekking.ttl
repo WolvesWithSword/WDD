@@ -1,25 +1,31 @@
 @base <http://trekking.fr/resource/>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>. 
 @prefix onto: <http://trekking.fr/ontology/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
 
 #Trip type --------------------
 
 <hiking>
 a <WalkingTour>;
 onto:name "Hiking";
-ont:hasActivity <AdrarOases>;
-ont:hasActivity <TikalVolcanoes>.
+onto:hasActivity <AdrarOases>;
+onto:hasActivity <TikalVolcanoes>.
 
 <trekking>
 a <WalkingTour>;
 onto:name "Trekking";
-ont:hasActivity <SaharanKaleidoscope>.
+onto:hasActivity <SaharanKaleidoscope>.
 
 <snowshoe>
 a <Snow>;
 onto:name "snowshoe";
-ont:hasActivity <SnowshoeingCerdanya>;
-ont:hasActivity <3000Queyras>.
+onto:hasActivity <SnowshoeingCerdanya>;
+onto:hasActivity <3000Queyras>.
+
+<ski-touring>
+a <Snow>;
+onto:name "Ski touring".
 
 # Activity --------------------
 
@@ -30,7 +36,7 @@ onto:description "This magnificent trek offers a real dive in the heart of the M
 onto:evaluation "4.8"^^xsd:double;
 onto:price: "1165.0"^^xsd:double;
 onto:hasDestination <Mauritania>;
-onto:hasTravelGroup <AdrarGroup>.
+onto:hasTravelGroup <AdrarGroup>,<AdrarGroup2>,<AdrarGroup3>.
 
 <TikalVolcanoes>
 a <Activity>;
@@ -66,7 +72,17 @@ onto:evaluation "5.0"^^xsd:double;
 onto:price: "780.0"^^xsd:double;
 onto:description "The Cerdanya and its Catalan altiplano, rich in an unsuspected historical and cultural heritage, present a soft relief particularly adapted to snowshoeing.";
 onto:hasDestination <France>;
-onto:hasTravelGroup <CerdanyaGroup>.
+onto:hasTravelGroup <CerdanyaGroup>,<CerdanyaGroup2>.
+
+<The-high-valleys-of-Piedmont>
+a <Activity>;
+onto:name "The high valleys of Piedmont";
+onto:evaluation "5.0"^^xsd:double;
+onto:price: "965.0"^^xsd:double;
+onto:description "This itinerary combines the authenticity of the Piedmontese villages with the wild beauty of the Southern Alps.";
+onto:hasDestination <France>;
+onto:hasDestination <Italie>;
+onto:hasTravelGroup <The-high-valleys-of-Piedmont>.
 
 # Country --------------------
 <Mauritania>
@@ -84,6 +100,11 @@ a <Country>;
 onto:name "France";
 onto:description "France is a country in Central Europa".
 
+<Italie>
+a <Country>;
+onto:name "Italie";
+onto:description "Italie is a country in Central Europa".
+
 # Travel group --------------------
 
 <AdrarGroup>
@@ -94,6 +115,42 @@ onto:hasGuide <Michel>;
 onto:hasParticipant <Vanessa>;
 onto:hasParticipant <Laurent>;
 onto:hasParticipant <David>.
+
+<AdrarGroup>
+a <TravelGroup>;
+onto:participantsMaxNumber "5"^^xsd:integer;
+onto:departureDate "2021-10-13"^^xsd:date;
+onto:hasGuide <Michel>;
+onto:hasParticipant <Vanessa>;
+onto:hasParticipant <Laurent>;
+onto:hasParticipant <David>.
+
+<AdrarGroup>
+a <TravelGroup>;
+onto:participantsMaxNumber "5"^^xsd:integer;
+onto:departureDate "2021-10-13"^^xsd:date;
+onto:hasGuide <Michel>;
+onto:hasParticipant <Vanessa>;
+onto:hasParticipant <Laurent>;
+onto:hasParticipant <David>.
+
+<AdrarGroup2>
+a <TravelGroup>;
+onto:participantsMaxNumber "5"^^xsd:integer;
+onto:departureDate "2021-12-10"^^xsd:date;
+onto:hasGuide <Jean>;
+onto:hasParticipant <Paul>;
+onto:hasParticipant <Jack>.
+
+<AdrarGroup3>
+a <TravelGroup>;
+onto:participantsMaxNumber "5"^^xsd:integer;
+onto:departureDate "2020-11-13"^^xsd:date;
+onto:hasGuide <Michel>;
+onto:hasParticipant <Robert>;
+onto:hasParticipant <Claude>;
+onto:hasParticipant <Linda>,<Manitas>.
+
 
 <TikalGroup>
 a <TravelGroup>;
@@ -130,6 +187,16 @@ onto:hasGuide <Gérard>;
 onto:hasParticipant <David>;
 onto:hasParticipant <Charlie>;
 onto:hasParticipant <Frank>.
+
+<CerdanyaGroup2>
+a <TravelGroup>;
+onto:participantsMaxNumber "3"^^xsd:integer;
+onto:departureDate "2021-11-11"^^xsd:date;
+onto:hasGuide <Gérard>;
+onto:hasParticipant <Ondine>;
+onto:hasParticipant <Pierre>;
+onto:hasParticipant <Franky>.
+
 
 # Person ---------------
 
@@ -216,3 +283,9 @@ a <Client>, <Woman>;
 foaf:name "Natacha";
 foaf:age "28"^^xsd:integer;
 foaf:familyName "Swift".
+
+<Tom>
+a <Client>, <Man>;
+foaf:name "Tom";
+foaf:age "40"^^xsd:integer;
+foaf:familyName "Hanks".
