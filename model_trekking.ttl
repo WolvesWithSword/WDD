@@ -113,7 +113,16 @@
     rdfs:range xsd:double.
 
 <onto:name> a rdf:Property;
+    rdfs:subClassOf foaf:name;
     rdfs:range xsd:string.
+
+<onto:familyName> a rdf:Property;
+    rdfs:subClassOf foaf:familyName;
+    rdfs:range xsd:string.
+
+<onto:age> a rdf:Property;
+    rdfs:subClassOf foaf:age;
+    rdfs:range xsd:integer.
 
 <onto:description> a rdf:Property;
     rdfs:range xsd:string.

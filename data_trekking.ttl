@@ -82,7 +82,7 @@ onto:price "965.0"^^xsd:double;
 onto:description "This itinerary combines the authenticity of the Piedmontese villages with the wild beauty of the Southern Alps.";
 onto:hasDestination <France>;
 onto:hasDestination <Italie>;
-onto:hasTravelGroup <The-high-valleys-of-Piedmont>.
+onto:hasTravelGroup <TheHighValleysOfPiedmontGroup>.
 
 # Country --------------------
 <Mauritania>
@@ -116,28 +116,10 @@ onto:hasParticipant <Vanessa>;
 onto:hasParticipant <Laurent>;
 onto:hasParticipant <David>.
 
-<AdrarGroup>
-a <TravelGroup>;
-onto:participantsMaxNumber "5"^^xsd:integer;
-onto:departureDate "2021-10-13"^^xsd:date;
-onto:hasGuide <Michel>;
-onto:hasParticipant <Vanessa>;
-onto:hasParticipant <Laurent>;
-onto:hasParticipant <David>.
-
-<AdrarGroup>
-a <TravelGroup>;
-onto:participantsMaxNumber "5"^^xsd:integer;
-onto:departureDate "2021-10-13"^^xsd:date;
-onto:hasGuide <Michel>;
-onto:hasParticipant <Vanessa>;
-onto:hasParticipant <Laurent>;
-onto:hasParticipant <David>.
-
 <AdrarGroup2>
 a <TravelGroup>;
 onto:participantsMaxNumber "5"^^xsd:integer;
-onto:departureDate "2021-12-10"^^xsd:date;
+onto:departureDate "2022-12-10"^^xsd:date;
 onto:hasGuide <Jean>;
 onto:hasParticipant <Paul>;
 onto:hasParticipant <Jack>.
@@ -202,101 +184,101 @@ onto:hasParticipant <Franky>.
 
 <Gérard>
 a <Guide>, <Man>;
-foaf:name "Gérard";
-foaf:age "37"^^xsd:integer;
-foaf:familyName "LeMontagnard".
+onto:name "Gérard";
+onto:age "37"^^xsd:integer;
+onto:familyName "LeMontagnard".
 
 <Manitas>
 a <Guide>, <Man>;
-foaf:name "Manitas";
-foaf:age "33"^^xsd:integer;
-foaf:familyName "Del habitas".
+onto:name "Manitas";
+onto:age "33"^^xsd:integer;
+onto:familyName "Del habitas".
 
 <Michel>
 a <Guide>, <Man>;
-foaf:name "Michel";
-foaf:age "41"^^xsd:integer;
-foaf:familyName "Labranche".
+onto:name "Michel";
+onto:age "41"^^xsd:integer;
+onto:familyName "Labranche".
 
 <Cesar>
 a <Guide>, <Man>;
-foaf:name "Cesar";
-foaf:age "47"^^xsd:integer;
-foaf:familyName "Laurier".
+onto:name "Cesar";
+onto:age "47"^^xsd:integer;
+onto:familyName "Laurier".
 
 <Vanessa>
 a <Client>, <Woman>;
-foaf:name "Vanessa";
-foaf:age "30"^^xsd:integer;
-foaf:familyName "Petit".
+onto:name "Vanessa";
+onto:age "30"^^xsd:integer;
+onto:familyName "Petit".
 
 <Maya>
 a <Client>, <Woman>;
-foaf:name "Maya";
-foaf:age "24"^^xsd:integer;
-foaf:familyName "Calendar".
+onto:name "Maya";
+onto:age "24"^^xsd:integer;
+onto:familyName "Calendar".
 
 <Robert>
 a <Client>, <Man>;
-foaf:name "Robert";
-foaf:age "55"^^xsd:integer;
-foaf:familyName "Camembert".
+onto:name "Robert";
+onto:age "55"^^xsd:integer;
+onto:familyName "Camembert".
 
 <Frank>
 a <Client>, <Man>;
-foaf:name "Frank";
-foaf:age "38"^^xsd:integer;
-foaf:familyName "Ribery".
+onto:name "Frank";
+onto:age "38"^^xsd:integer;
+onto:familyName "Ribery".
 
 <Michael>
 a <Client>, <Man>;
-foaf:name "Michael";
-foaf:age "45"^^xsd:integer;
-foaf:familyName "Jordan".
+onto:name "Michael";
+onto:age "45"^^xsd:integer;
+onto:familyName "Jordan".
 
 <Laurent>
 a <Client>, <Man>;
-foaf:name "Laurent";
-foaf:age "32"^^xsd:integer;
-foaf:familyName "Petit".
+onto:name "Laurent";
+onto:age "32"^^xsd:integer;
+onto:familyName "Petit".
 
 <David>
 a <Client>, <Man>;
-foaf:name "David";
-foaf:age "50"^^xsd:integer;
-foaf:familyName "Escargot".
+onto:name "David";
+onto:age "50"^^xsd:integer;
+onto:familyName "Escargot".
 
 <Marc>
 a <Client>, <Man>;
-foaf:name "Marc";
-foaf:age "46"^^xsd:integer;
-foaf:familyName "Down".
+onto:name "Marc";
+onto:age "46"^^xsd:integer;
+onto:familyName "Down".
 
 <Charlie>
 a <Client>, <Man>;
-foaf:name "Charlie";
-foaf:age "34"^^xsd:integer;
-foaf:familyName "Chocolat".
+onto:name "Charlie";
+onto:age "34"^^xsd:integer;
+onto:familyName "Chocolat".
 
 <Natacha>
 a <Client>, <Woman>;
-foaf:name "Natacha";
-foaf:age "28"^^xsd:integer;
-foaf:familyName "Swift".
+onto:name "Natacha";
+onto:age "28"^^xsd:integer;
+onto:familyName "Swift".
 
 <Tom>
 a <Client>, <Man>;
-foaf:name "Tom";
-foaf:age "40"^^xsd:integer;
-foaf:familyName "Hanks".
+onto:name "Tom";
+onto:age "40"^^xsd:integer;
+onto:familyName "Hanks".
 
 <Jery>
 a <Client>;
-foaf:name "Jery";
-foaf:age "5"^^xsd:integer.
+onto:name "Jery";
+onto:age "5"^^xsd:integer.
 
 <Elle>
 a <Guide>, <Woman>;
-foaf:name "Elle";
-foaf:age "20"^^xsd:integer;
-foaf:familyName "Rie".
+onto:name "Elle";
+onto:age "20"^^xsd:integer;
+onto:familyName "Rie".
