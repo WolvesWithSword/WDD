@@ -11,7 +11,7 @@ WHERE {
 }
 GROUP BY ?group
 
-# 2 - le nombre de places restant par groupes
+# 2 - le nombre de places restantes par groupes
 prefix foaf: <http://xmlns.com/foaf/0.1/>
 prefix onto: <http://trekking.fr/ontology/>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -33,7 +33,7 @@ SELECT ?x ?group ?max_participant ?nb_participant ((?max_participant - ?nb_parti
 
 }
 
-# 3 - le nombre de places restant par groupes qui n'ont toujours pas commencés
+# 3 - le nombre de places restantes par groupes qui n'ont toujours pas commencés
 prefix foaf: <http://xmlns.com/foaf/0.1/>
 prefix onto: <http://trekking.fr/ontology/>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -70,7 +70,7 @@ SELECT * WHERE
 ORDER BY ASC(?price) 
 LIMIT 3
 
-# 5 - toutes les personnes avec lesquels un guide a fait une activité (en tant que guide de l'activité)
+# 5 - toutes les personnes avec lesquelles un guide a fait une activité (en tant que guide de l'activité)
 prefix foaf: <http://xmlns.com/foaf/0.1/>
 prefix onto: <http://trekking.fr/ontology/>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#>
