@@ -34,7 +34,7 @@ a <Activity>;
 onto:name "The oases of the Adrar";
 onto:description "This magnificent trek offers a real dive in the heart of the Mauritanian desert.";
 onto:evaluation "4.8"^^xsd:double;
-onto:price: "1165.0"^^xsd:double;
+onto:price "1165.0"^^xsd:double;
 onto:hasDestination <Mauritania>;
 onto:hasTravelGroup <AdrarGroup>,<AdrarGroup2>,<AdrarGroup3>.
 
@@ -42,7 +42,7 @@ onto:hasTravelGroup <AdrarGroup>,<AdrarGroup2>,<AdrarGroup3>.
 a <Activity>;
 onto:name "From Mayan volcanoes to the temples of Tikal";
 onto:evaluation "5.0"^^xsd:double;
-onto:price: "3290.0"^^xsd:double;
+onto:price "3290.0"^^xsd:double;
 onto:description "Hike in Guatemala on the volcanic highlands and climb its main volcanoes, including Tajumulco (4200 m).";
 onto:hasDestination <Guatemala>;
 onto:hasTravelGroup <TikalGroup>.
@@ -51,7 +51,7 @@ onto:hasTravelGroup <TikalGroup>.
 a <Activity>;
 onto:name "The Saharan Kaleidoscope";
 onto:evaluation "5.0"^^xsd:double;
-onto:price: "1545.0"^^xsd:double;
+onto:price "1545.0"^^xsd:double;
 onto:description "The first week on the itinerary of the oases and villages of the Adrar and the second, in the heart of a wild universe, between white dunes and typical tabular plateaus of the Amatlich.";
 onto:hasDestination <Mauritania>;
 onto:hasTravelGroup <SaharanGroup>.
@@ -60,7 +60,7 @@ onto:hasTravelGroup <SaharanGroup>.
 a <Activity>;
 onto:name "The 3000 of Queyras";
 onto:evaluation "5.0"^^xsd:double;
-onto:price: "525.0"^^xsd:double;
+onto:price "525.0"^^xsd:double;
 onto:description "Alpine crossing of the Queyras massif by its most beautiful peaks: Pic Caramantran (3025 m), Sagnes Longues (3032 m) and Pic du Château Renard (2989 m).";
 onto:hasDestination <France>;
 onto:hasTravelGroup <QueyrasGroup>.
@@ -69,7 +69,7 @@ onto:hasTravelGroup <QueyrasGroup>.
 a <Activity>;
 onto:name "Snowshoeing and well-being in Cerdanya";
 onto:evaluation "5.0"^^xsd:double;
-onto:price: "780.0"^^xsd:double;
+onto:price "780.0"^^xsd:double;
 onto:description "The Cerdanya and its Catalan altiplano, rich in an unsuspected historical and cultural heritage, present a soft relief particularly adapted to snowshoeing.";
 onto:hasDestination <France>;
 onto:hasTravelGroup <CerdanyaGroup>,<CerdanyaGroup2>.
@@ -78,7 +78,7 @@ onto:hasTravelGroup <CerdanyaGroup>,<CerdanyaGroup2>.
 a <Activity>;
 onto:name "The high valleys of Piedmont";
 onto:evaluation "5.0"^^xsd:double;
-onto:price: "965.0"^^xsd:double;
+onto:price "965.0"^^xsd:double;
 onto:description "This itinerary combines the authenticity of the Piedmontese villages with the wild beauty of the Southern Alps.";
 onto:hasDestination <France>;
 onto:hasDestination <Italie>;
@@ -289,3 +289,14 @@ a <Client>, <Man>;
 foaf:name "Tom";
 foaf:age "40"^^xsd:integer;
 foaf:familyName "Hanks".
+
+<Jery>
+a <Client>;
+foaf:name "Jery";
+foaf:age "5"^^xsd:integer.
+
+<Elle>
+a <Guide>, <Woman>;
+foaf:name "Elle";
+foaf:age "20"^^xsd:integer;
+foaf:familyName "Rie".
