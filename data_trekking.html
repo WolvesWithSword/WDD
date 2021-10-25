@@ -11,8 +11,12 @@
         td {
             border: 1px solid #000;
             border-collapse: collapse;
-            padding: 0 30px;
+            padding: 7px 30px;
 
+        }
+
+        table {
+            margin-top: 30px;
         }
     </style>
 </head>
@@ -20,7 +24,7 @@
 <body vocab="http://trekking.fr/resource/">
     <section>
         <h1>Country</h1>
-        <table resource="http://trekking.fr/resource/Mauritania" typeof="Country">
+        <table id="Mauritania" resource="http://trekking.fr/resource/Mauritania" typeof="Country">
             <thead>
                 <tr>
                     <th colspan="2">Mauritania</th>
@@ -39,7 +43,7 @@
                 </td>
             </tr>
         </table>
-        <table resource="http://trekking.fr/resource/Guatemala" typeof="Country">
+        <table id="Guatemala" resource="http://trekking.fr/resource/Guatemala" typeof="Country">
             <thead>
                 <tr>
                     <th colspan="2">Guatemala</th>
@@ -58,7 +62,7 @@
                 </td>
             </tr>
         </table>
-        <table resource="http://trekking.fr/resource/France" typeof="Country">
+        <table id="France" resource="http://trekking.fr/resource/France" typeof="Country">
             <thead>
                 <tr>
                     <th colspan="2">France</th>
@@ -77,7 +81,7 @@
                 </td>
             </tr>
         </table>
-        <table resource="http://trekking.fr/resource/Italie" typeof="Country">
+        <table id="Italie" resource="http://trekking.fr/resource/Italie" typeof="Country">
             <thead>
                 <tr>
                     <th colspan="2">Italie</th>
@@ -99,9 +103,67 @@
     </section>
 
     <section>
+        <h1>Activity type</h1>
+        <table id="hiking" resource="http://trekking.fr/resource/hiking" typeof="WalkingTour">
+            <thead>
+                <tr>
+                    <th colspan="2">Hiking</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>name</td>
+                <td prefix="http://trekking.fr/ontology/" property="name" lang="en">
+                    Hiking
+                </td>
+            </tr>
+            <tr>
+                <td>has activity</td>
+                <td>
+                    <ul>
+                        <li property="hasActivity" resource="AdrarOases" typeof="Activity">
+                            <a href="#AdrarOases">Adrar Oases</a>
+                        </li>
+                        <li property="hasActivity" resource="TikalVolcanoes" typeof="Activity">
+                            <a href="#TikalVolcanoes">Tikal volcanoes</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <table id="hiking" resource="http://trekking.fr/resource/hiking" typeof="WalkingTour">
+            <thead>
+                <tr>
+                    <th colspan="2">Snowshoe</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>name</td>
+                <td prefix="http://trekking.fr/ontology/" property="name">
+                    snowshoe
+                </td>
+            </tr>
+            <tr>
+                <td>has activity</td>
+                <td>
+                    <ul>
+                        <li property="hasActivity" resource="SnowshoeingCerdanya" typeof="Activity">
+                            <a href="#SnowshoeingCerdanya">Snowshoeing cerdanya</a>
+                        </li>
+                        <li property="hasActivity" resource="3000Queyras" typeof="Activity">
+                            <a href="#3000Queyras">3000 Queyras</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+
+    </section>
+
+    <section>
         <h1>Activity</h1>
 
-        <table resource="http://trekking.fr/resource/AdrarOases">
+        <table id="AdrarOases" resource="http://trekking.fr/resource/AdrarOases" typeof="Activity">
             <thead>
                 <tr>
                     <th colspan="2">Adrar Oases</th>
@@ -148,12 +210,15 @@
                 <td>has travel group</td>
                 <td>
                     <ul>
-                        <li property="hasTravelGroup" resource="AdrarGroup" href="#AdrarGroup" typeof="TravelGroup">
-                            Adrar group</li>
-                        <li property="hasTravelGroup" resource="AdrarGroup2" href="#AdrarGroup2" typeof="TravelGroup">
-                            Adrar group 2</li>
-                        <li property="hasTravelGroup" resource="AdrarGroup3" href="#AdrarGroup3" typeof="TravelGroup">
-                            Adrar group 3</li>
+                        <li property="hasTravelGroup" resource="AdrarGroup" typeof="TravelGroup">
+                            <a href="#AdrarGroup">Adrar group</a>
+                        </li>
+                        <li property="hasTravelGroup" resource="AdrarGroup2" typeof="TravelGroup">
+                            <a href="#AdrarGroup2">Adrar group 2</a>
+                        </li>
+                        <li property="hasTravelGroup" resource="AdrarGroup3" typeof="TravelGroup">
+                            <a href="#AdrarGroup3">Adrar group 3</a>
+                        </li>
                     </ul>
                 </td>
             </tr>
@@ -162,6 +227,138 @@
 
     </section>
 
+    <section>
+        <h1>Travel group</h1>
+
+        <table id="AdrarGroup" resource="http://trekking.fr/resource/AdrarGroup" typeof="TravelGroup">
+            <thead>
+                <tr>
+                    <th colspan="2">Adrar Group</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>participants max number</td>
+                <td prefix="http://trekking.fr/ontology/" property="participantsMaxNumber"
+                    typeof="http://www.w3.org/2001/XMLSchema#integer">
+                    5
+                </td>
+            </tr>
+            <tr>
+                <td>departure date</td>
+                <td prefix="http://trekking.fr/ontology/" property="departureDate"
+                    typeof="http://www.w3.org/2001/XMLSchema#date">
+                    2021-10-13
+                </td>
+            </tr>
+            <tr>
+                <td>has guide</td>
+                <td prefix="http://trekking.fr/ontology/" resource="Michel" property="hasGuide" typeof="Guide">
+                    <a href="#Michel">Michel</a>
+                </td>
+            </tr>
+            <tr>
+                <td>has client</td>
+                <td>
+                    <ul>
+                        <li property="hasClient" resource="Vanessa" href="#Vanessa" typeof="Client">
+                            <a href="#Vanessa">Vanessa</a>
+                        </li>
+                        <li property="hasClient" resource="Laurent" href="#Laurent" typeof="Client">
+                            <a href="#Laurent">Laurent</a>
+                        </li>
+                        <li property="hasClient" resource="David" href="#David" typeof="Client">
+                            <a href="#David">David</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <section>
+        <h1>Person</h1>
+        <table id="Michel" resource="http://trekking.fr/resource/Michel" typeof="Guide" typeof="Man">
+            <thead>
+                <tr>
+                    <th colspan="2">Michel</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>name</td>
+                <td prefix="http://trekking.fr/ontology/" property="name">
+                    Michel
+                </td>
+            </tr>
+            <tr>
+                <td>age</td>
+                <td prefix="http://trekking.fr/ontology/" property="age"
+                    typeof="http://www.w3.org/2001/XMLSchema#integer">
+                    41
+                </td>
+            </tr>
+            <tr>
+                <td>family Name</td>
+                <td prefix="http://trekking.fr/ontology/" property="familyName">
+                    Labranche
+                </td>
+            </tr>
+        </table>
+        <table id="Vanessa" resource="http://trekking.fr/resource/Vanessa" typeof="Client" typeof="Woman">
+            <thead>
+                <tr>
+                    <th colspan="2">Vanessa</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>name</td>
+                <td prefix="http://trekking.fr/ontology/" property="name">
+                    Vanessa
+                </td>
+            </tr>
+            <tr>
+                <td>age</td>
+                <td prefix="http://trekking.fr/ontology/" property="age"
+                    typeof="http://www.w3.org/2001/XMLSchema#integer">
+                    30
+                </td>
+            </tr>
+            <tr>
+                <td>family Name</td>
+                <td prefix="http://trekking.fr/ontology/" property="familyName">
+                    Petit
+                </td>
+            </tr>
+        </table>
+        <table id="Laurent" resource="http://trekking.fr/resource/Laurent" typeof="Client" typeof="Man">
+            <thead>
+                <tr>
+                    <th colspan="2">Laurent</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>name</td>
+                <td prefix="http://trekking.fr/ontology/" property="name">
+                    Laurent
+                </td>
+            </tr>
+            <tr>
+                <td>age</td>
+                <td prefix="http://trekking.fr/ontology/" property="age"
+                    typeof="http://www.w3.org/2001/XMLSchema#integer">
+                    32
+                </td>
+            </tr>
+            <tr>
+                <td>family Name</td>
+                <td prefix="http://trekking.fr/ontology/" property="familyName">
+                    Petit
+                </td>
+            </tr>
+        </table>
+
+    </section>
 
 </body>
 

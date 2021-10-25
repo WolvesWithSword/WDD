@@ -82,7 +82,7 @@ onto:evaluation "5.0"^^xsd:double;
 onto:price "965.0"^^xsd:double;
 onto:description "This itinerary combines the authenticity of the Piedmontese villages with the wild beauty of the Southern Alps.";
 onto:hasDestination <France>;
-onto:hasDestination <Italie>;
+onto:hasDestination <Italy>;
 onto:hasTravelGroup <TheHighValleysOfPiedmontGroup>.
 
 # Country --------------------
@@ -101,10 +101,10 @@ a <Country>;
 onto:name "France";
 onto:description "France is a country in Central Europa".
 
-<Italie>
+<Italy>
 a <Country>;
-onto:name "Italie";
-onto:description "Italie is a country in Central Europa".
+onto:name "Italy";
+onto:description "Italy is a country in Central Europa".
 
 # Travel group --------------------
 
