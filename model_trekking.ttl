@@ -80,8 +80,8 @@
 #Property
 
 <onto:hasTravelGroup> a rdf:Property;
-    rdfs:domain <TravelGroup>;
-    rdfs:range <Activity>.
+    rdfs:domain <Activity>;
+    rdfs:range <TravelGroup>.
 
 <onto:participantsMaxNumber> a rdf:Property;
     rdfs:domain <TravelGroup>;
@@ -89,15 +89,15 @@
 
 <onto:hasParticipant> a rdf:Property;
     rdfs:domain <TravelGroup>;
-    rdfs:range <Client>.
+    rdfs:range <Person>.
 
 <onto:hasGuide> a rdf:Property;
-    rdfs:subClassOf foaf:hasParticipant;
+    rdfs:subClassOf onto:hasParticipant;
     rdfs:domain <TravelGroup>;
     rdfs:range <Guide>.
 
 <onto:hasClient> a rdf:Property;
-    rdfs:subClassOf foaf:hasParticipant;
+    rdfs:subClassOf onto:hasParticipant;
     rdfs:domain <TravelGroup>;
     rdfs:range <Guide>.
 
