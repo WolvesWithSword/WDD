@@ -7,7 +7,7 @@ prefix resource: <http://trekking.fr/resource/>
 SELECT  ?group (COUNT(?participant) AS ?nb_participant)
 WHERE {
  	?x ?y ?group.
-	?group onto:hasParticipant ?participant
+	?group onto:hasClient ?participant
 }
 GROUP BY ?group
 
@@ -22,7 +22,7 @@ SELECT ?x ?group ?max_participant ?nb_participant ((?max_participant - ?nb_parti
         SELECT  ?group (COUNT(?participant) AS ?nb_participant)
         WHERE {
             ?x ?y ?group.
-            ?group onto:hasParticipant ?participant
+            ?group onto:hasClient ?participant
         }
         GROUP BY ?group
     }
@@ -44,7 +44,7 @@ SELECT ?x ?group ?max_participant ?nb_participant ((?max_participant - ?nb_parti
         SELECT  ?group (COUNT(?participant) AS ?nb_participant)
         WHERE {
             ?x ?y ?group.
-            ?group onto:hasParticipant ?participant
+            ?group onto:hasClient ?participant
         }
         GROUP BY ?group
     }
@@ -79,7 +79,7 @@ prefix resource: <http://trekking.fr/resource/>
 SELECT DISTINCT ?guide ?participant WHERE
 {
     ?group onto:hasGuide ?guide.
-    ?group onto:hasParticipant ?participant.
+    ?group onto:hasClient ?participant.
     OPTIONAL { ?guide a resource:Guide}
 } 
 
@@ -110,7 +110,7 @@ GROUP BY ?guide
 ORDER BY DESC(?nb_group)
 
 
-# 8 - ajouter Nathalie à la liste des clients en tant que femme qui a 19 ans
+# 8.1 - ajouter Nathalie à la liste des clients en tant que femme qui a 19 ans
 prefix foaf: <http://xmlns.com/foaf/0.1/>
 prefix onto: <http://trekking.fr/ontology/>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -119,6 +119,16 @@ prefix resource: <http://trekking.fr/resource/>
 INSERT DATA { 
     resource:Nathalie a resource:Client,resource:Woman.
     resource:Nathalie onto:age 19. 
+}
+
+# 8.2 - voir que Nathalie a bien été ajouter
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+prefix onto: <http://trekking.fr/ontology/>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix resource: <http://trekking.fr/resource/>
+
+CONSTRUCT {resource:Nathalie ?x ?y} WHERE{ 
+    resource:Nathalie ?x ?y.
 }
 
 # 9 - supprimer Nathalie de la liste des clients ainsi que toutes ces informations
@@ -140,7 +150,7 @@ prefix resource: <http://trekking.fr/resource/>
 SELECT ?client WHERE
 {
     ?client a resource:Client.
-    MINUS{?group onto:hasParticipant ?client}
+    MINUS{?group onto:hasClient ?client}
 }
 
 # 11 - Un graphe sur les activités par secteur geographique
