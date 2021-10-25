@@ -31,7 +31,8 @@ onto:name "Ski touring".
 
 <AdrarOases>
 a <Activity>;
-onto:name "The oases of the Adrar";
+onto:name "The oases of the Adrar"@en;
+onto:name "Les oasis de l'Adrar"@fr;
 onto:description "This magnificent trek offers a real dive in the heart of the Mauritanian desert.";
 onto:evaluation "4.8"^^xsd:double;
 onto:price "1165.0"^^xsd:double;

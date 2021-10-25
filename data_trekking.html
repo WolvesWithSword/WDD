@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        td {
+            border: 1px solid #000;
+            border-collapse: collapse;
+            padding: 0 30px;
+
+        }
+    </style>
+</head>
+
+<body vocab="http://trekking.fr/resource/">
+    <section>
+        <h1>Country</h1>
+        <table resource="http://trekking.fr/resource/Mauritania" typeof="Country">
+            <thead>
+                <tr>
+                    <th colspan="2">Mauritania</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>name</td>
+                <td prefix="http://trekking.fr/ontology/" property="name" lang="en">
+                    Mauritania
+                </td>
+            </tr>
+            <tr>
+                <td>description</td>
+                <td prefix="http://trekking.fr/ontology/" property="description" lang="en">
+                    Mauritania is a state in Northwest Africa
+                </td>
+            </tr>
+        </table>
+        <table resource="http://trekking.fr/resource/Guatemala" typeof="Country">
+            <thead>
+                <tr>
+                    <th colspan="2">Guatemala</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>name</td>
+                <td prefix="http://trekking.fr/ontology/" property="name" lang="en">
+                    Guatemala
+                </td>
+            </tr>
+            <tr>
+                <td>description</td>
+                <td prefix="http://trekking.fr/ontology/" property="description" lang="en">
+                    Guatemala is a country in Central America
+                </td>
+            </tr>
+        </table>
+        <table resource="http://trekking.fr/resource/France" typeof="Country">
+            <thead>
+                <tr>
+                    <th colspan="2">France</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>name</td>
+                <td prefix="http://trekking.fr/ontology/" property="name" lang="en">
+                    France
+                </td>
+            </tr>
+            <tr>
+                <td>description</td>
+                <td prefix="http://trekking.fr/ontology/" property="description" lang="en">
+                    France is a country in Central Europa
+                </td>
+            </tr>
+        </table>
+        <table resource="http://trekking.fr/resource/Italie" typeof="Country">
+            <thead>
+                <tr>
+                    <th colspan="2">Italie</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>name</td>
+                <td prefix="http://trekking.fr/ontology/" property="name" lang="en">
+                    Italie
+                </td>
+            </tr>
+            <tr>
+                <td>description</td>
+                <td prefix="http://trekking.fr/ontology/" property="description" lang="en">
+                    Italie is a country in Central Europa
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h1>Activity</h1>
+
+        <table resource="http://trekking.fr/resource/AdrarOases">
+            <thead>
+                <tr>
+                    <th colspan="2">Adrar Oases</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>name @en</td>
+                <td prefix="http://trekking.fr/ontology/" property="name" lang="en">
+                    The oases of the Adrar
+                </td>
+            </tr>
+            <tr>
+                <td>name @fr</td>
+                <td prefix="http://trekking.fr/ontology/" property="name" lang="fr">
+                    Les oasis de l'Adrar
+                </td>
+            </tr>
+            <tr>
+                <td>description</td>
+                <td prefix="http://trekking.fr/ontology/" property="description">
+                    This magnificent trek offers a real dive in the heart of the Mauritanian desert.
+                </td>
+            </tr>
+            <tr>
+                <td>evaluation</td>
+                <td prefix="http://trekking.fr/ontology/" property="evaluation"
+                    typeof="http://www.w3.org/2001/XMLSchema#double">
+                    4.8
+                </td>
+            </tr>
+            <tr>
+                <td>price</td>
+                <td prefix="http://trekking.fr/ontology/" property="price"
+                    typeof="http://www.w3.org/2001/XMLSchema#double">
+                    1165.0
+                </td>
+            </tr>
+            <tr>
+                <td>Has for destination</td>
+                <td><a property="hasDestination" resource="Mauritania" href="#Mauritania"
+                        typeof="Country">Mauritania</a></td>
+            </tr>
+            <tr>
+                <td>has travel group</td>
+                <td>
+                    <ul>
+                        <li property="hasTravelGroup" resource="AdrarGroup" href="#AdrarGroup" typeof="TravelGroup">
+                            Adrar group</li>
+                        <li property="hasTravelGroup" resource="AdrarGroup2" href="#AdrarGroup2" typeof="TravelGroup">
+                            Adrar group 2</li>
+                        <li property="hasTravelGroup" resource="AdrarGroup3" href="#AdrarGroup3" typeof="TravelGroup">
+                            Adrar group 3</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+
+    </section>
+
+
+</body>
+
+</html>
