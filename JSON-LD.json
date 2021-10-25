@@ -1,5 +1,83 @@
 [
     {
+        "@id": "http://trekking.fr/resource/Snow"
+    },
+    {
+        "@id": "http://trekking.fr/resource/WalkingTour"
+    },
+    {
+        "@id": "http://trekking.fr/resource/hiking",
+        "@type": [
+            "http://trekking.fr/resource/WalkingTour"
+        ],
+        "http://trekking.fr/ontology/name": [
+            {
+                "@value": "Hiking"
+            }
+        ],
+        "http://trekking.fr/ontology/hasActivity": [
+            {
+                "@id": "http://trekking.fr/resource/TikalVolcanoes"
+            }
+        ]
+    },
+    {
+        "@id": "http://trekking.fr/resource/snowshoe",
+        "@type": [
+            "http://trekking.fr/resource/Snow"
+        ],
+        "http://trekking.fr/ontology/name": [
+            {
+                "@value": "snowshoe"
+            }
+        ],
+        "http://trekking.fr/ontology/hasActivity": [
+            {
+                "@id": "http://trekking.fr/resource/3000Queyras"
+            }
+        ]
+    },
+
+    {
+        "@id": "http://trekking.fr/resource/Activity"
+    },
+    {
+        "@id": "http://trekking.fr/resource/TikalVolcanoes",
+        "@type": [
+            "http://trekking.fr/resource/Activity"
+        ],
+        "http://trekking.fr/ontology/name": [
+            {
+                "@value": "From Mayan volcanoes to the temples of Tikal"
+            }
+        ],
+        "http://trekking.fr/ontology/evaluation": [
+            {
+                "@value": 5
+            }
+        ],
+        "http://trekking.fr/ontology/price": [
+            {
+                "@value": 3290
+            }
+        ],
+        "http://trekking.fr/ontology/description": [
+            {
+                "@value": "Hike in Guatemala on the volcanic highlands and climb its main volcanoes, including Tajumulco (4200 m)."
+            }
+        ],
+        "http://trekking.fr/ontology/hasDestination": [
+            {
+                "@id": "http://trekking.fr/resource/Guatemala"
+            }
+        ],
+        "http://trekking.fr/ontology/hasTravelGroup": [
+            {
+                "@id": "http://trekking.fr/resource/TikalGroup"
+            }
+        ]
+    },
+    {
         "@id": "http://trekking.fr/resource/3000Queyras",
         "@type": [
             "http://trekking.fr/resource/Activity"
@@ -35,215 +113,18 @@
             }
         ]
     },
+
     {
-        "@id": "http://trekking.fr/resource/Activity"
+        "@id": "http://trekking.fr/resource/Client"
     },
     {
-        "@id": "http://trekking.fr/resource/AdrarGroup",
-        "@type": [
-            "http://trekking.fr/resource/TravelGroup"
-        ],
-        "http://trekking.fr/ontology/participantsMaxNumber": [
-            {
-                "@value": 5
-            }
-        ],
-        "http://trekking.fr/ontology/departureDate": [
-            {
-                "@value": "2021-10-13",
-                "@type": "http://www.w3.org/2001/XMLSchema#date"
-            }
-        ],
-        "http://trekking.fr/ontology/hasGuide": [
-            {
-                "@id": "http://trekking.fr/resource/Michel"
-            }
-        ],
-        "http://trekking.fr/ontology/hasClient": [
-            {
-                "@id": "http://trekking.fr/resource/Vanessa"
-            },
-            {
-                "@id": "http://trekking.fr/resource/Laurent"
-            },
-            {
-                "@id": "http://trekking.fr/resource/David"
-            }
-        ]
+        "@id": "http://trekking.fr/resource/Guide"
     },
     {
-        "@id": "http://trekking.fr/resource/AdrarGroup2",
-        "@type": [
-            "http://trekking.fr/resource/TravelGroup"
-        ],
-        "http://trekking.fr/ontology/participantsMaxNumber": [
-            {
-                "@value": 5
-            }
-        ],
-        "http://trekking.fr/ontology/departureDate": [
-            {
-                "@value": "2022-12-10",
-                "@type": "http://www.w3.org/2001/XMLSchema#date"
-            }
-        ],
-        "http://trekking.fr/ontology/hasGuide": [
-            {
-                "@id": "http://trekking.fr/resource/Jean"
-            }
-        ],
-        "http://trekking.fr/ontology/hasClient": [
-            {
-                "@id": "http://trekking.fr/resource/Paul"
-            },
-            {
-                "@id": "http://trekking.fr/resource/Jack"
-            }
-        ]
+        "@id": "http://trekking.fr/resource/Man"
     },
     {
-        "@id": "http://trekking.fr/resource/AdrarGroup3",
-        "@type": [
-            "http://trekking.fr/resource/TravelGroup"
-        ],
-        "http://trekking.fr/ontology/participantsMaxNumber": [
-            {
-                "@value": 5
-            }
-        ],
-        "http://trekking.fr/ontology/departureDate": [
-            {
-                "@value": "2020-11-13",
-                "@type": "http://www.w3.org/2001/XMLSchema#date"
-            }
-        ],
-        "http://trekking.fr/ontology/hasGuide": [
-            {
-                "@id": "http://trekking.fr/resource/Michel"
-            }
-        ],
-        "http://trekking.fr/ontology/hasClient": [
-            {
-                "@id": "http://trekking.fr/resource/Robert"
-            },
-            {
-                "@id": "http://trekking.fr/resource/Claude"
-            },
-            {
-                "@id": "http://trekking.fr/resource/Linda"
-            },
-            {
-                "@id": "http://trekking.fr/resource/Manitas"
-            }
-        ]
-    },
-    {
-        "@id": "http://trekking.fr/resource/AdrarOases",
-        "@type": [
-            "http://trekking.fr/resource/Activity"
-        ],
-        "http://trekking.fr/ontology/name": [
-            {
-                "@value": "The oases of the Adrar"
-            }
-        ],
-        "http://trekking.fr/ontology/description": [
-            {
-                "@value": "This magnificent trek offers a real dive in the heart of the Mauritanian desert."
-            }
-        ],
-        "http://trekking.fr/ontology/evaluation": [
-            {
-                "@value": 4.8
-            }
-        ],
-        "http://trekking.fr/ontology/price": [
-            {
-                "@value": 1165
-            }
-        ],
-        "http://trekking.fr/ontology/hasDestination": [
-            {
-                "@id": "http://trekking.fr/resource/Mauritania"
-            }
-        ],
-        "http://trekking.fr/ontology/hasTravelGroup": [
-            {
-                "@id": "http://trekking.fr/resource/AdrarGroup"
-            },
-            {
-                "@id": "http://trekking.fr/resource/AdrarGroup2"
-            },
-            {
-                "@id": "http://trekking.fr/resource/AdrarGroup3"
-            }
-        ]
-    },
-    {
-        "@id": "http://trekking.fr/resource/CerdanyaGroup",
-        "@type": [
-            "http://trekking.fr/resource/TravelGroup"
-        ],
-        "http://trekking.fr/ontology/participantsMaxNumber": [
-            {
-                "@value": 3
-            }
-        ],
-        "http://trekking.fr/ontology/departureDate": [
-            {
-                "@value": "2021-11-11",
-                "@type": "http://www.w3.org/2001/XMLSchema#date"
-            }
-        ],
-        "http://trekking.fr/ontology/hasGuide": [
-            {
-                "@id": "http://trekking.fr/resource/Gérard"
-            }
-        ],
-        "http://trekking.fr/ontology/hasClient": [
-            {
-                "@id": "http://trekking.fr/resource/David"
-            },
-            {
-                "@id": "http://trekking.fr/resource/Charlie"
-            },
-            {
-                "@id": "http://trekking.fr/resource/Frank"
-            }
-        ]
-    },
-    {
-        "@id": "http://trekking.fr/resource/CerdanyaGroup2",
-        "@type": [
-            "http://trekking.fr/resource/TravelGroup"
-        ],
-        "http://trekking.fr/ontology/participantsMaxNumber": [
-            {
-                "@value": 3
-            }
-        ],
-        "http://trekking.fr/ontology/departureDate": [
-            {
-                "@value": "2021-11-11",
-                "@type": "http://www.w3.org/2001/XMLSchema#date"
-            }
-        ],
-        "http://trekking.fr/ontology/hasGuide": [
-            {
-                "@id": "http://trekking.fr/resource/Gérard"
-            }
-        ],
-        "http://trekking.fr/ontology/hasClient": [
-            {
-                "@id": "http://trekking.fr/resource/Ondine"
-            },
-            {
-                "@id": "http://trekking.fr/resource/Pierre"
-            },
-            {
-                "@id": "http://trekking.fr/resource/Franky"
-            }
-        ]
+        "@id": "http://trekking.fr/resource/Woman"
     },
     {
         "@id": "http://trekking.fr/resource/Cesar",
@@ -290,229 +171,6 @@
         ]
     },
     {
-        "@id": "http://trekking.fr/resource/Claude"
-    },
-    {
-        "@id": "http://trekking.fr/resource/Client"
-    },
-    {
-        "@id": "http://trekking.fr/resource/Country"
-    },
-    {
-        "@id": "http://trekking.fr/resource/David",
-        "@type": [
-            "http://trekking.fr/resource/Client",
-            "http://trekking.fr/resource/Man"
-        ],
-        "http://trekking.fr/ontology/name": [
-            {
-                "@value": "David"
-            }
-        ],
-        "http://trekking.fr/ontology/age": [
-            {
-                "@value": 50
-            }
-        ],
-        "http://trekking.fr/ontology/familyName": [
-            {
-                "@value": "Escargot"
-            }
-        ]
-    },
-    {
-        "@id": "http://trekking.fr/resource/Elle",
-        "@type": [
-            "http://trekking.fr/resource/Guide",
-            "http://trekking.fr/resource/Woman"
-        ],
-        "http://trekking.fr/ontology/name": [
-            {
-                "@value": "Elle"
-            }
-        ],
-        "http://trekking.fr/ontology/age": [
-            {
-                "@value": 20
-            }
-        ],
-        "http://trekking.fr/ontology/familyName": [
-            {
-                "@value": "Rie"
-            }
-        ]
-    },
-    {
-        "@id": "http://trekking.fr/resource/France",
-        "@type": [
-            "http://trekking.fr/resource/Country"
-        ],
-        "http://trekking.fr/ontology/name": [
-            {
-                "@value": "France"
-            }
-        ],
-        "http://trekking.fr/ontology/description": [
-            {
-                "@value": "France is a country in Central Europa"
-            }
-        ]
-    },
-    {
-        "@id": "http://trekking.fr/resource/Frank",
-        "@type": [
-            "http://trekking.fr/resource/Client",
-            "http://trekking.fr/resource/Man"
-        ],
-        "http://trekking.fr/ontology/name": [
-            {
-                "@value": "Frank"
-            }
-        ],
-        "http://trekking.fr/ontology/age": [
-            {
-                "@value": 38
-            }
-        ],
-        "http://trekking.fr/ontology/familyName": [
-            {
-                "@value": "Ribery"
-            }
-        ]
-    },
-    {
-        "@id": "http://trekking.fr/resource/Franky"
-    },
-    {
-        "@id": "http://trekking.fr/resource/Guatemala",
-        "@type": [
-            "http://trekking.fr/resource/Country"
-        ],
-        "http://trekking.fr/ontology/name": [
-            {
-                "@value": "Guatemala"
-            }
-        ],
-        "http://trekking.fr/ontology/description": [
-            {
-                "@value": "Guatemala is a country in Central America"
-            }
-        ]
-    },
-    {
-        "@id": "http://trekking.fr/resource/Guide"
-    },
-    {
-        "@id": "http://trekking.fr/resource/Gérard",
-        "@type": [
-            "http://trekking.fr/resource/Guide",
-            "http://trekking.fr/resource/Man"
-        ],
-        "http://trekking.fr/ontology/name": [
-            {
-                "@value": "Gérard"
-            }
-        ],
-        "http://trekking.fr/ontology/age": [
-            {
-                "@value": 37
-            }
-        ],
-        "http://trekking.fr/ontology/familyName": [
-            {
-                "@value": "LeMontagnard"
-            }
-        ]
-    },
-    {
-        "@id": "http://trekking.fr/resource/Italie",
-        "@type": [
-            "http://trekking.fr/resource/Country"
-        ],
-        "http://trekking.fr/ontology/name": [
-            {
-                "@value": "Italie"
-            }
-        ],
-        "http://trekking.fr/ontology/description": [
-            {
-                "@value": "Italie is a country in Central Europa"
-            }
-        ]
-    },
-    {
-        "@id": "http://trekking.fr/resource/Jack"
-    },
-    {
-        "@id": "http://trekking.fr/resource/Jean"
-    },
-    {
-        "@id": "http://trekking.fr/resource/Jery",
-        "@type": [
-            "http://trekking.fr/resource/Client"
-        ],
-        "http://trekking.fr/ontology/name": [
-            {
-                "@value": "Jery"
-            }
-        ],
-        "http://trekking.fr/ontology/age": [
-            {
-                "@value": 5
-            }
-        ]
-    },
-    {
-        "@id": "http://trekking.fr/resource/Laurent",
-        "@type": [
-            "http://trekking.fr/resource/Client",
-            "http://trekking.fr/resource/Man"
-        ],
-        "http://trekking.fr/ontology/name": [
-            {
-                "@value": "Laurent"
-            }
-        ],
-        "http://trekking.fr/ontology/age": [
-            {
-                "@value": 32
-            }
-        ],
-        "http://trekking.fr/ontology/familyName": [
-            {
-                "@value": "Petit"
-            }
-        ]
-    },
-    {
-        "@id": "http://trekking.fr/resource/Linda"
-    },
-    {
-        "@id": "http://trekking.fr/resource/Man"
-    },
-    {
-        "@id": "http://trekking.fr/resource/Manitas",
-        "@type": [
-            "http://trekking.fr/resource/Guide",
-            "http://trekking.fr/resource/Man"
-        ],
-        "http://trekking.fr/ontology/name": [
-            {
-                "@value": "Manitas"
-            }
-        ],
-        "http://trekking.fr/ontology/age": [
-            {
-                "@value": 33
-            }
-        ],
-        "http://trekking.fr/ontology/familyName": [
-            {
-                "@value": "Del habitas"
-            }
-        ]
-    },
-    {
         "@id": "http://trekking.fr/resource/Marc",
         "@type": [
             "http://trekking.fr/resource/Client",
@@ -531,22 +189,6 @@
         "http://trekking.fr/ontology/familyName": [
             {
                 "@value": "Down"
-            }
-        ]
-    },
-    {
-        "@id": "http://trekking.fr/resource/Mauritania",
-        "@type": [
-            "http://trekking.fr/resource/Country"
-        ],
-        "http://trekking.fr/ontology/name": [
-            {
-                "@value": "Mauritania"
-            }
-        ],
-        "http://trekking.fr/ontology/description": [
-            {
-                "@value": "Mauritania is a state in Northwest Africa"
             }
         ]
     },
@@ -573,50 +215,6 @@
         ]
     },
     {
-        "@id": "http://trekking.fr/resource/Michael",
-        "@type": [
-            "http://trekking.fr/resource/Client",
-            "http://trekking.fr/resource/Man"
-        ],
-        "http://trekking.fr/ontology/name": [
-            {
-                "@value": "Michael"
-            }
-        ],
-        "http://trekking.fr/ontology/age": [
-            {
-                "@value": 45
-            }
-        ],
-        "http://trekking.fr/ontology/familyName": [
-            {
-                "@value": "Jordan"
-            }
-        ]
-    },
-    {
-        "@id": "http://trekking.fr/resource/Michel",
-        "@type": [
-            "http://trekking.fr/resource/Guide",
-            "http://trekking.fr/resource/Man"
-        ],
-        "http://trekking.fr/ontology/name": [
-            {
-                "@value": "Michel"
-            }
-        ],
-        "http://trekking.fr/ontology/age": [
-            {
-                "@value": 41
-            }
-        ],
-        "http://trekking.fr/ontology/familyName": [
-            {
-                "@value": "Labranche"
-            }
-        ]
-    },
-    {
         "@id": "http://trekking.fr/resource/Natacha",
         "@type": [
             "http://trekking.fr/resource/Client",
@@ -639,13 +237,75 @@
         ]
     },
     {
+        "@id": "http://trekking.fr/resource/Gérard",
+        "@type": [
+            "http://trekking.fr/resource/Guide",
+            "http://trekking.fr/resource/Man"
+        ],
+        "http://trekking.fr/ontology/name": [
+            {
+                "@value": "Gérard"
+            }
+        ],
+        "http://trekking.fr/ontology/age": [
+            {
+                "@value": 37
+            }
+        ],
+        "http://trekking.fr/ontology/familyName": [
+            {
+                "@value": "LeMontagnard"
+            }
+        ]
+    },
+    {
         "@id": "http://trekking.fr/resource/Ondine"
     },
     {
-        "@id": "http://trekking.fr/resource/Paul"
+        "@id": "http://trekking.fr/resource/Pierre"
     },
     {
-        "@id": "http://trekking.fr/resource/Pierre"
+        "@id": "http://trekking.fr/resource/Sacha"
+    },
+
+    {
+        "@id": "http://trekking.fr/resource/Country"
+    },
+    {
+        "@id": "http://trekking.fr/resource/France",
+        "@type": [
+            "http://trekking.fr/resource/Country"
+        ],
+        "http://trekking.fr/ontology/name": [
+            {
+                "@value": "France"
+            }
+        ],
+        "http://trekking.fr/ontology/description": [
+            {
+                "@value": "France is a country in Central Europa"
+            }
+        ]
+    },
+    {
+        "@id": "http://trekking.fr/resource/Guatemala",
+        "@type": [
+            "http://trekking.fr/resource/Country"
+        ],
+        "http://trekking.fr/ontology/name": [
+            {
+                "@value": "Guatemala"
+            }
+        ],
+        "http://trekking.fr/ontology/description": [
+            {
+                "@value": "Guatemala is a country in Central America"
+            }
+        ]
+    },
+
+    {
+        "@id": "http://trekking.fr/resource/TravelGroup"
     },
     {
         "@id": "http://trekking.fr/resource/QueyrasGroup",
@@ -681,184 +341,6 @@
         ]
     },
     {
-        "@id": "http://trekking.fr/resource/Robert",
-        "@type": [
-            "http://trekking.fr/resource/Client",
-            "http://trekking.fr/resource/Man"
-        ],
-        "http://trekking.fr/ontology/name": [
-            {
-                "@value": "Robert"
-            }
-        ],
-        "http://trekking.fr/ontology/age": [
-            {
-                "@value": 55
-            }
-        ],
-        "http://trekking.fr/ontology/familyName": [
-            {
-                "@value": "Camembert"
-            }
-        ]
-    },
-    {
-        "@id": "http://trekking.fr/resource/Sacha"
-    },
-    {
-        "@id": "http://trekking.fr/resource/SaharanGroup",
-        "@type": [
-            "http://trekking.fr/resource/TravelGroup"
-        ],
-        "http://trekking.fr/ontology/participantsMaxNumber": [
-            {
-                "@value": 7
-            }
-        ],
-        "http://trekking.fr/ontology/departureDate": [
-            {
-                "@value": "2021-10-17",
-                "@type": "http://www.w3.org/2001/XMLSchema#date"
-            }
-        ],
-        "http://trekking.fr/ontology/hasGuide": [
-            {
-                "@id": "http://trekking.fr/resource/Manitas"
-            }
-        ],
-        "http://trekking.fr/ontology/hasClient": [
-            {
-                "@id": "http://trekking.fr/resource/Maya"
-            },
-            {
-                "@id": "http://trekking.fr/resource/Michael"
-            },
-            {
-                "@id": "http://trekking.fr/resource/Robert"
-            }
-        ]
-    },
-    {
-        "@id": "http://trekking.fr/resource/SaharanKaleidoscope",
-        "@type": [
-            "http://trekking.fr/resource/Activity"
-        ],
-        "http://trekking.fr/ontology/name": [
-            {
-                "@value": "The Saharan Kaleidoscope"
-            }
-        ],
-        "http://trekking.fr/ontology/evaluation": [
-            {
-                "@value": 5
-            }
-        ],
-        "http://trekking.fr/ontology/price": [
-            {
-                "@value": 1545
-            }
-        ],
-        "http://trekking.fr/ontology/description": [
-            {
-                "@value": "The first week on the itinerary of the oases and villages of the Adrar and the second, in the heart of a wild universe, between white dunes and typical tabular plateaus of the Amatlich."
-            }
-        ],
-        "http://trekking.fr/ontology/hasDestination": [
-            {
-                "@id": "http://trekking.fr/resource/Mauritania"
-            }
-        ],
-        "http://trekking.fr/ontology/hasTravelGroup": [
-            {
-                "@id": "http://trekking.fr/resource/SaharanGroup"
-            }
-        ]
-    },
-    {
-        "@id": "http://trekking.fr/resource/Snow"
-    },
-    {
-        "@id": "http://trekking.fr/resource/SnowshoeingCerdanya",
-        "@type": [
-            "http://trekking.fr/resource/Activity"
-        ],
-        "http://trekking.fr/ontology/name": [
-            {
-                "@value": "Snowshoeing and well-being in Cerdanya"
-            }
-        ],
-        "http://trekking.fr/ontology/evaluation": [
-            {
-                "@value": 5
-            }
-        ],
-        "http://trekking.fr/ontology/price": [
-            {
-                "@value": 780
-            }
-        ],
-        "http://trekking.fr/ontology/description": [
-            {
-                "@value": "The Cerdanya and its Catalan altiplano, rich in an unsuspected historical and cultural heritage, present a soft relief particularly adapted to snowshoeing."
-            }
-        ],
-        "http://trekking.fr/ontology/hasDestination": [
-            {
-                "@id": "http://trekking.fr/resource/France"
-            }
-        ],
-        "http://trekking.fr/ontology/hasTravelGroup": [
-            {
-                "@id": "http://trekking.fr/resource/CerdanyaGroup"
-            },
-            {
-                "@id": "http://trekking.fr/resource/CerdanyaGroup2"
-            }
-        ]
-    },
-    {
-        "@id": "http://trekking.fr/resource/The-high-valleys-of-Piedmont",
-        "@type": [
-            "http://trekking.fr/resource/Activity"
-        ],
-        "http://trekking.fr/ontology/name": [
-            {
-                "@value": "The high valleys of Piedmont"
-            }
-        ],
-        "http://trekking.fr/ontology/evaluation": [
-            {
-                "@value": 5
-            }
-        ],
-        "http://trekking.fr/ontology/price": [
-            {
-                "@value": 965
-            }
-        ],
-        "http://trekking.fr/ontology/description": [
-            {
-                "@value": "This itinerary combines the authenticity of the Piedmontese villages with the wild beauty of the Southern Alps."
-            }
-        ],
-        "http://trekking.fr/ontology/hasDestination": [
-            {
-                "@id": "http://trekking.fr/resource/France"
-            },
-            {
-                "@id": "http://trekking.fr/resource/Italie"
-            }
-        ],
-        "http://trekking.fr/ontology/hasTravelGroup": [
-            {
-                "@id": "http://trekking.fr/resource/TheHighValleysOfPiedmontGroup"
-            }
-        ]
-    },
-    {
-        "@id": "http://trekking.fr/resource/TheHighValleysOfPiedmontGroup"
-    },
-    {
         "@id": "http://trekking.fr/resource/TikalGroup",
         "@type": [
             "http://trekking.fr/resource/TravelGroup"
@@ -888,160 +370,6 @@
             },
             {
                 "@id": "http://trekking.fr/resource/Natacha"
-            }
-        ]
-    },
-    {
-        "@id": "http://trekking.fr/resource/TikalVolcanoes",
-        "@type": [
-            "http://trekking.fr/resource/Activity"
-        ],
-        "http://trekking.fr/ontology/name": [
-            {
-                "@value": "From Mayan volcanoes to the temples of Tikal"
-            }
-        ],
-        "http://trekking.fr/ontology/evaluation": [
-            {
-                "@value": 5
-            }
-        ],
-        "http://trekking.fr/ontology/price": [
-            {
-                "@value": 3290
-            }
-        ],
-        "http://trekking.fr/ontology/description": [
-            {
-                "@value": "Hike in Guatemala on the volcanic highlands and climb its main volcanoes, including Tajumulco (4200 m)."
-            }
-        ],
-        "http://trekking.fr/ontology/hasDestination": [
-            {
-                "@id": "http://trekking.fr/resource/Guatemala"
-            }
-        ],
-        "http://trekking.fr/ontology/hasTravelGroup": [
-            {
-                "@id": "http://trekking.fr/resource/TikalGroup"
-            }
-        ]
-    },
-    {
-        "@id": "http://trekking.fr/resource/Tom",
-        "@type": [
-            "http://trekking.fr/resource/Client",
-            "http://trekking.fr/resource/Man"
-        ],
-        "http://trekking.fr/ontology/name": [
-            {
-                "@value": "Tom"
-            }
-        ],
-        "http://trekking.fr/ontology/age": [
-            {
-                "@value": 40
-            }
-        ],
-        "http://trekking.fr/ontology/familyName": [
-            {
-                "@value": "Hanks"
-            }
-        ]
-    },
-    {
-        "@id": "http://trekking.fr/resource/TravelGroup"
-    },
-    {
-        "@id": "http://trekking.fr/resource/Vanessa",
-        "@type": [
-            "http://trekking.fr/resource/Client",
-            "http://trekking.fr/resource/Woman"
-        ],
-        "http://trekking.fr/ontology/name": [
-            {
-                "@value": "Vanessa"
-            }
-        ],
-        "http://trekking.fr/ontology/age": [
-            {
-                "@value": 30
-            }
-        ],
-        "http://trekking.fr/ontology/familyName": [
-            {
-                "@value": "Petit"
-            }
-        ]
-    },
-    {
-        "@id": "http://trekking.fr/resource/WalkingTour"
-    },
-    {
-        "@id": "http://trekking.fr/resource/Woman"
-    },
-    {
-        "@id": "http://trekking.fr/resource/hiking",
-        "@type": [
-            "http://trekking.fr/resource/WalkingTour"
-        ],
-        "http://trekking.fr/ontology/name": [
-            {
-                "@value": "Hiking"
-            }
-        ],
-        "http://trekking.fr/ontology/hasActivity": [
-            {
-                "@id": "http://trekking.fr/resource/AdrarOases"
-            },
-            {
-                "@id": "http://trekking.fr/resource/TikalVolcanoes"
-            }
-        ]
-    },
-    {
-        "@id": "http://trekking.fr/resource/ski-touring",
-        "@type": [
-            "http://trekking.fr/resource/Snow"
-        ],
-        "http://trekking.fr/ontology/name": [
-            {
-                "@value": "Ski touring"
-            }
-        ]
-    },
-    {
-        "@id": "http://trekking.fr/resource/snowshoe",
-        "@type": [
-            "http://trekking.fr/resource/Snow"
-        ],
-        "http://trekking.fr/ontology/name": [
-            {
-                "@value": "snowshoe"
-            }
-        ],
-        "http://trekking.fr/ontology/hasActivity": [
-            {
-                "@id": "http://trekking.fr/resource/SnowshoeingCerdanya"
-            },
-            {
-                "@id": "http://trekking.fr/resource/3000Queyras"
-            }
-        ]
-    },
-    {
-        "@id": "http://trekking.fr/resource/trekking",
-        "@type": [
-            "http://trekking.fr/resource/WalkingTour"
-        ],
-        "http://trekking.fr/ontology/name": [
-            {
-                "@value": "Trekking"
-            }
-        ],
-        "http://trekking.fr/ontology/hasActivity": [
-            {
-                "@id": "http://trekking.fr/resource/SaharanKaleidoscope"
             }
         ]
     }
